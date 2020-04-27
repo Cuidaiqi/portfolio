@@ -1,0 +1,209 @@
+body {
+    background-color: black;
+    font-family: 'Baloo Paaji 2', cursive;
+  }
+.logo{
+  position: absolute;
+
+left: 25px;
+top: 10px;
+}
+.title{
+    position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+left: 100px;
+top: 25px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 0px;
+
+color: #FFFFFF;
+
+    
+  }
+
+  /* logo
+  Question: how to make two class overlay?
+   make this logo infront of h1? 
+   should I use element as head?
+  */
+  
+.reel {
+  overflow:hidden;
+  padding-top:100%;
+  position:relative;
+  height:0;
+}
+.reel iframe{
+    left:35px;
+    top:0;
+    height:60%;
+    width:60%;
+    position:absolute;
+}
+
+.dots {
+  float: right;
+  padding-right: 1%;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin-bottom: 1%;
+  /* display: inline-block; */
+}
+.animation {
+  border: 1px solid white;
+  box-sizing: border-box;
+  background-color:black;
+  transition: width 0.5s, height 4s;
+  position: relative;
+}
+.illustration {
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  background-color:#C4C4C4;
+  transition: width 0.5s, height 4s;
+  position: relative;
+}
+.contact {
+  border: 1px solid white;
+  box-sizing: border-box;
+  background-color:white;
+  transition: width 0.5s, height 4s;
+  position: relative;
+}
+
+#animationtext{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration-color: teal;
+  height: 25px ;
+  width: 80px ;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  opacity:0%;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  }
+  /*Why it changes horizontally*/
+  .animation:hover {
+  width:50px;
+  }
+  
+  #animationtext:hover{
+  opacity: 100%;
+  width:60px;
+  
+  }
+
+  #illustrationtext{
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration-color: teal;
+    height: 25px ;
+    width: 80px ;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    opacity:0%;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    }
+    /*Why it changes horizontally*/
+    .illustration:hover {
+    width:50px;
+    }
+    
+    #illustrationtext:hover{
+    opacity: 100%;
+    width:60px;
+    
+    }
+#contacttext{
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration-color: teal;
+  height: 25px ;
+  width: 80px ;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  opacity:0%;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+/*Why it changes horizontally*/
+.contact:hover {
+  width:50px;
+}
+
+#contacttext:hover{
+opacity: 100%;
+width:60px;
+
+}
+
+/*why cant put them to end*/
+.nav{
+  right:35px;
+  top:15px;
+  display:flex;
+  justify-content: flex-end;
+  flex-direction:column;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.animation2 {
+  width: 120px;
+  height: 25px;
+  background-color: rgb(184, 184, 184);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .animation {opacity: 0;}
+.change .animation2 {opacity: 100;}
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+    
+    color: lightgray;
+    font-family : 'Gotu', sans-serif;
+    font-size:100%
+  }
+  h2{
+      color: tan;
+  }
+  p {
+    color: lightgray;
+  }
+
+
+  

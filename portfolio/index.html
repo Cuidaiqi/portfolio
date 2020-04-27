@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="final\style.css">
+        <link rel="stylesheet" href="final\works.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!--<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Gotu&display=swap" rel="stylesheet">-->
+        
+    </head>
+   <style>
+.w3-quarter img{margin-bottom: 0px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+  h5 {
+      float: left;
+      padding-left: 1%;
+              
+              font-family: 'Gotu', sans-serif;
+              font-style: normal;
+              font-weight: 40;
+              font-size: 80px;
+              line-height: 293px;
+              text-transform: uppercase;
+             
+              
+              color:white;
+              text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.342);
+              transform: rotate(90deg);}
+  h2{transform: rotate(90deg);}
+   </style>
+       
+    <body> <!----add classes <---->
+        <div class = "logo">
+            <img src="final\images\logo.png" alt="Logo" class="logo">
+        </div>
+
+        <div class = "title">
+        <h1>Daiqi Cui</h1>          
+        </div>
+ 
+       <div class="container" onclick="myFunction(this)">
+
+        <div class = "nav" style="text-align:center">
+            
+            <button type="button" class="animation" value="nav"></button>
+            
+            <button type="button" class="illustration" value="nav"></button>
+            <button type="button" class="contact" value="nav"></button>
+
+        </div>
+        </div>
+
+      <!--<div class="container" hover="myFunction(this)">-->
+            <div class="dots">
+              <div class="dot animation">
+                <p id="animationtext">animation</p>
+              </div>
+              <div class="dot illustration">
+                <p id="illustrationtext">illustration</p>
+              </div>
+              <div class="dot contact">
+                <p id="contacttext">contact</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="workimgs"></div>
+        <!--film-->
+          <div class = "reel" width="640" height ="360">
+                <iframe src="https://player.vimeo.com/video/301106884" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+        <div class="w3-row w3-grayscale-min">
+          <div class="w3-quarter">
+            <h2>WORKS</h2>
+     
+
+          </div>
+          
+         <div class="w3-quarter">
+            <img src="final/images/4.png" style="width:100%" onclick="onClick(this)" alt="Film">
+            <img src="final/images/5.png" style="width:100%" onclick="onClick(this)" alt="Film">
+            <img src="final/images/1.png" style="width:100%" onclick="onClick(this)" alt="Film">
+          </div>
+          
+          <div class="w3-quarter">
+            <img src="final/images/1.png" style="width:100%" onclick="onClick(this)" alt="Film">
+            <img src="final/images/1.png" style="width:100%" onclick="onClick(this)" alt="Film">
+            <img src="final/images/1.png" style="width:100%" onclick="onClick(this)" alt="Film">
+          </div>
+      
+          <div class="w3-quarter">
+            <img src="final/images/2.png" style="width:100%" onclick="onClick(this)" alt="Film">
+            <img src="final/images/2.png" style="width:100%" onclick="onClick(this)" alt="Film">
+            <img src="final/images/2.png" style="width:100%" onclick="onClick(this)" alt="Film">
+          </div>
+        </div>
+          
+           <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+<h4>Hello</h4>
+
+
+<div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+  <h4><b>About</b></h4>
+  <img src="no.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+  <div class="w3-content w3-justify" style="max-width:600px">
+    <h5>Daiqi Cui</h5>
+    <p>Hi ! I am Daiqi Cui. 
+
+I am an animator, illustrator, currently living in New York.  
+Thinking, learning, creating make my day. I am interested in different forms of art and love to share my thoughts with friends. 
+
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+  
+
+</script>
+
+     <div style="text-align:center">   
+
+    </body>
+</html>
