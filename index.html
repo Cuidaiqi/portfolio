@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="final/js/jquery-3.4.1.min.js"></script>
+    <script src="final/js/jquery.pagepiling.min.js"></script>
+    <script src="final/js/custom.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class = "logo" >
+        <img src="final/img/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class = "name" >
+    <h3>Daiqi Cui</h3>          
+    </div>
+<div class="wrapper">
+   
+
+    <div id="page">
+        <section class="section" id="section1">
+            <div class="projects">
+                <!--workpic and detial-->
+                <div data-number="1" data-title="REEL" data-number-images="6" data-description=" " class="project project-1">
+                    <img src="final/img/reelthumbnail.png"/>
+                </div>
+                <!-- <div data-number="2" data-number-images="8" data-title="Winter" data-description="My Description 2" class="project project-2">
+                    <img src="img/project2-sm.jpg"/>
+                </div>
+                <div data-number="3" data-number-images="6" data-title="Sonnet" data-description="My Description 3" class="project project-3">
+                    <img src="img/project3-sm.jpg"/>
+                </div> -->
+            </div>
+        </section>
+        <!--side lable-->
+        <section class="section" id="section2">
+            <h1>WORK</h1>
+           
+        </section>
+        <section class="section" id="section3">
+            <h1>ILLUSTRATION</h1>
+
+
+            <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+                <div class="w3-row w3-grayscale-min">     
+                    <div class="w3-quarter">
+
+                    </div>
+         <div class="w3-quarter">
+              <img src="final/images/baiwu.jpg" style="width:100%" onclick="onClick(this)" alt="Film">
+              <img src="final/images/comic.jpg" style="width:100%" onclick="onClick(this)" alt="Film">
+              <img src="final/images/hold.jpg" style="width:100%" onclick="onClick(this)" alt="Film">
+            </div>
+            
+            <div class="w3-quarter">
+              <img src="final/images/moon_orig.jpg" style="width:100%" onclick="onClick(this)" alt="Film">
+              <img src="final/images/sculpture.jpg" style="width:100%" onclick="onClick(this)" alt="Film">
+              <img src="final/images/swan.jpg" style="width:100%" onclick="onClick(this)" alt="Film">
+            </div>
+        
+            <div class="w3-quarter">
+              <img src="final/images/2.png" style="width:100%" onclick="onClick(this)" alt="Film">
+              <img src="final/images/2.png" style="width:100%" onclick="onClick(this)" alt="Film">
+              <img src="final/images/3.png" style="width:100%" onclick="onClick(this)" alt="Film">
+            </div>
+        </div>
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+              <img id="img01" class="w3-image">
+              <p id="caption"></p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section" id="section4">
+            <h1>CONTACT</h1>
+            <img class = "resume" src="images/resume2.png" alt="resume">
+        </section>
+    </div>
+
+    
+    <div class="overlay full">
+        <div class="content">
+        <div class="close">X</div>
+        <h1>Title</h1>
+        <h2>Description</h2>
+        <div class="images">
+        </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    </script>
+      
+</html>
