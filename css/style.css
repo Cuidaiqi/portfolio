@@ -22,17 +22,18 @@
      z-index: 1;
     /* cursor：; */
  }
- .cursor{
-    /* z-index: 20; */
-     width: 20px;
-     height:20px;
-     border:1px inset white;
-     border-radius:50%;
-     position: absolute;
-     top:0px;
+ .cursor {
+    width: 20px;
+    height:20px;
+    border:1px inset white;
+    border-radius:50%;
+    position: absolute;
+    top:0px;
     left:0px;
-     animation: cursorAnim .8s infinite alternate;
+    animation: cursorAnim .8s infinite alternate;
+    z-index: 1002;
  }
+
 .cursor::after{
     content:"";
     width: 20px;
@@ -43,12 +44,10 @@
     top:-8px;
     left:-8px;
     animation: cursorAnim2 .8s infinite alternate;
-
-
 }
  @keyframes cursorAnim{
      from {
-            opacity: 100%;
+        opacity: 100%;
      }
      to {
          opacity: 20%;

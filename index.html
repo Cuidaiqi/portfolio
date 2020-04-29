@@ -13,17 +13,8 @@
 </head>
 
 <body>
-    <div class="cursor"> </div>
+    <div class="cursor"></div>
 
-    <script>
-
-        const cursor = document.querySelector('.cursor');
-        document.addEventListener('mousemove',e =>{
-            cursor.setAttribute("style","top:"+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;" )
-        })
-
-    
-        </script>
     <div class = "logo" >
         <img src="img/logo.png" alt="Logo" class="logo">
     </div>
@@ -32,7 +23,6 @@
     <h3>Daiqi Cui</h3>          
     </div>
 <div class="wrapper">
-   
 
     <div id="page">
         <section class="section" id="section1">
@@ -113,6 +103,11 @@
 </body>
 
 <script>
+    const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove',e =>{
+        cursor.setAttribute("style","top:"+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;" )
+    });
+
     // Modal Image Gallery
     function onClick(element) {
       document.getElementById("img01").src = element.src;
@@ -120,7 +115,6 @@
       var captionText = document.getElementById("caption");
       captionText.innerHTML = element.alt;
     }
-    
     </script>
       
 </html>
