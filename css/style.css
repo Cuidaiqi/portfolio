@@ -19,7 +19,7 @@
      font-size: 100%;
      font: inherit;
      vertical-align: baseline;
-     z-index: -1;
+     z-index: 1;
     /* cursor：; */
  }
  .cursor{
