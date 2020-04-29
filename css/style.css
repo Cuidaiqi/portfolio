@@ -19,8 +19,49 @@
      font-size: 100%;
      font: inherit;
      vertical-align: baseline;
+     z-index: -1;
+    /* cursor：; */
  }
- 
+ .cursor{
+    /* z-index: 20; */
+     width: 20px;
+     height:20px;
+     border:1px inset white;
+     border-radius:50%;
+     position: absolute;
+     top:0px;
+    left:0px;
+     animation: cursorAnim .8s infinite alternate;
+ }
+.cursor::after{
+    content:"";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 3px solid gray;
+    border-radius:50%;
+    top:-8px;
+    left:-8px;
+    animation: cursorAnim2 .8s infinite alternate;
+
+
+}
+ @keyframes cursorAnim{
+     from {
+            opacity: 100%;
+     }
+     to {
+         opacity: 20%;
+     }
+ }
+ @keyframes cursorAnim2{
+    from {
+           transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+    }
+}
  article, aside, details, figcaption, figure, 
  footer, header, hgroup, menu, nav, section {
      display: block;
@@ -162,14 +203,19 @@ section {
 /** pics
 ---------------------------------------------------------*/
 .w3-quarter{
-    width:100px;
-    line-height:initial;
+   
     display: flex;
     justify-content: space-between;
     justify-content: flex-end;
     
 }
-
+/* fix distort of pics */
+#cover{
+    object-fit: cover;
+    width: 200px;
+   height:200px;
+   cursor: move;
+}
 .w3-row{
     display: flex;
     flex-direction: column;
