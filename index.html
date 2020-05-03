@@ -26,12 +26,13 @@
 
     <div id="page">
         <section class="section" id="section1">
-            <div class="projects">
+          <h1>REEL</h1>
+            <div class="projects" id="reelsmall">
                 <!--workpic and detial-->
-                <div data-number="1" data-title="REEL" data-number-images="6" data-description=" " class="project project-1">
+                                <div data-number="1" data-title="REEL" data-number-images="6" data-description=" " class="project project-1">
                     <img src="img/reelthumbnail.png"/>
                 </div>
-                <!-- <div data-number="2" data-number-images="8" data-title="Winter" data-description="My Description 2" class="project project-2">
+                             <!-- <div data-number="2" data-number-images="8" data-title="Winter" data-description="My Description 2" class="project project-2">
                     <img src="img/project2-sm.jpg"/>
                 </div>
                 <div data-number="3" data-number-images="6" data-title="Sonnet" data-description="My Description 3" class="project project-3">
@@ -42,7 +43,33 @@
         <!--side lable-->
         <section class="section" id="section2">
             <h1>WORK</h1>
-           
+            <div class="w3-row w3-grayscale-min">     
+                <div class="w3-quarter">
+
+                </div>
+     <div class="w3-quarter">
+      <div data-number="1" data-title="As Time Goes By" data-number-images="6" data-description=" " class="project1" >
+        <img src="img/astimegoesby.png"id="coverfilm"/>
+    </div>
+    <div data-number="1" data-title="12 principles" data-number-images="6" data-description=" " class="project2"  >
+      <img src="img/12princples.png"id="coverfilm"/>
+  </div>
+          
+        </div>
+        
+        <div class="w3-quarter">
+          <div data-number="1" data-title="DOGGIE" data-number-images="6" data-description=" " class="project3" >
+            <img src="img/doggie.png"id="coverfilm"/>
+        </div>
+        <div data-number="1" data-title="Deer" data-number-images="6" data-description=" " class="project4" >
+          <img src="img/deer.png"id="coverfilm"/>
+      </div>
+      
+        </div>
+    
+      
+    </div>
+ 
         </section>
         <section class="section" id="section3">
             <h1>ILLUSTRATION</h1>
@@ -54,7 +81,7 @@
 
                     </div>
          <div class="w3-quarter">
-              <img src="images/baiwu.jpg" id="cover"onclick="onClick(this)" alt="Film">
+              <img src="images/baiwu.jpg" id="cover"onclick="onClick(this)" alt="Baiwu">
               <img src="images/comic.jpg" id="cover" onclick="onClick(this)" alt="Film">
               <img src="images/hold.jpg" id="cover" onclick="onClick(this)" alt="Film">
             </div>
@@ -84,11 +111,41 @@
 
         <section class="section" id="section4">
             <h1>CONTACT</h1>
+            <div class="contact">
+              <form method="post" action="/add">
+                <div class="form-field">
+                  <label>Name</label><br>
+                  <input type="text" name="First name" placeholder="First name">
+                  <input type="text" name="Last name" placeholder="Last name">
+                </div>
+                <div class="form-field">
+                  <label>Company</label><br>
+                  <input type="text" name="company" placeholder="company">
+                </div>
+                <div class="form-field">
+                  <label>Email</label><br>
+                  <input type="email" name="email" placeholder="email" required>
+                </div>
+                <div class="form-field">
+                  <label>Message</label><br>
+                  <input type="textarea" name="message" placeholder="message" required>
+                </div>
+                <input class="submit" type="submit" value="Submit">
+              </form>
+            </div>
+            
             <img class = "resume" src="images/resume2.png" alt="resume">
         </section>
     </div>
 
-    
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+
     <div class="overlay full">
         <div class="content">
         <div class="close">X</div>
@@ -112,6 +169,7 @@
     function onClick(element) {
       document.getElementById("img01").src = element.src;
       document.getElementById("modal01").style.display = "block";
+      
       var captionText = document.getElementById("caption");
       captionText.innerHTML = element.alt;
     }
